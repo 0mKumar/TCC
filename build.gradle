@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'ism.cse.se'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.mongodb:mongodb-driver-sync:4.5.1'
+    implementation fileTree(dir: 'lib', includes: ['*.jar'])
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
