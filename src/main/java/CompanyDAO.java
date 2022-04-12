@@ -19,7 +19,8 @@ public class CompanyDAO {
 	
 	CompanyDAO() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trasnsport","root","Say9753an#");
+		con = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/transportdbxx","transportxxx","12345678");
+//		con = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/transportdbxx","transportxxx","12345678");
 	}
 	
 	void insert_manager(String id, String name, String address, String mobile, String emailid, String branchid, String password) throws SQLException{
