@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
@@ -19,7 +20,9 @@ public class CompanyDAO {
 	
 	CompanyDAO() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/transportdbxx","transportxxx","12345678");
+		Properties properties = new Properties();
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transport", "root", "12345678");
+//		con = DriverManager.getConnection("jdbc:sqlserver://cseiitism.database.windows.net:1433;database=transport;user=user1@cseiitism;password=user@1__;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
 //		con = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/transportdbxx","transportxxx","12345678");
 	}
 	

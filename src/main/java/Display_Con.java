@@ -96,7 +96,7 @@ public class Display_Con extends JDialog {
 				FormSpecs.RELATED_GAP_ROWSPEC,
 				FormSpecs.DEFAULT_ROWSPEC,}));
 		CompanyDAO com =new CompanyDAO();
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trasnsport","root","Say9753an#");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transport","root","12345678");
 		PreparedStatement psf = con.prepareStatement("select * from consignment where consignmentId = '"+consignmentid+"'");
 		ResultSet rs = psf.executeQuery();
 		if(rs.next()){
