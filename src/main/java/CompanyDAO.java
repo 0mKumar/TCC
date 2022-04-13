@@ -213,7 +213,7 @@ public class CompanyDAO {
 		PreparedStatement pstmt_3 = con.prepareStatement("update consignment set despatchdate = ? where consignmentId = '"+consignmentid+"'");
 		pstmt_3.setDate(1, date);
 		String trucknocon = get_truck_no_con(consignmentid);
-		PreparedStatement pstmt_4 = con.prepareStatement("update consignment set truckno = '"+trucknocon+","+truckno+"' where consignmentId = '"+consignmentid+"'");
+		PreparedStatement pstmt_4 = con.prepareStatement("update consignment set truckno = '"+trucknocon+""+truckno+"' where consignmentId = '"+consignmentid+"'");
 		pstmt_1.executeUpdate();
 		pstmt_2.executeUpdate();
 		pstmt_3.executeUpdate();

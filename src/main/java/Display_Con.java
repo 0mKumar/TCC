@@ -177,6 +177,7 @@ public class Display_Con extends JDialog {
 		{
 			JLabel tnumber = new JLabel("");
 			contentPanel.add(tnumber, "4, 14");
+			System.out.println(truckno);
 			tnumber.setText(truckno);
 		}
 		{
@@ -225,7 +226,7 @@ public class Display_Con extends JDialog {
 		{
 			JLabel truck = new JLabel("");
 			contentPanel.add(truck, "4, 24");
-			truck.setText(numtrucks);
+			truck.setText(vol);
 		}
 		{
 			JPanel buttonPane = new JPanel();
