@@ -127,12 +127,19 @@ public class sender_Details extends JDialog {
 						String email = textField_4.getText();
 						try {
 							com.insert_Customer(id, name, address, mobile, email, consignmentid);
-							receiver_Details dialog = new receiver_Details(dispatched,consignmentid,receiverid);
-							dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-							dialog.setVisible(true);
-							dispose();
 						} catch (Exception e) {
 							e.printStackTrace();
+						}finally {
+							try {
+								receiver_Details dialog = new receiver_Details(dispatched, consignmentid, receiverid);
+								dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+								dialog.setVisible(true);
+								dispose();
+							}catch (Exception e){
+								e.printStackTrace();
+							}finally {
+								dispose();
+							}
 						}
 					}
 				});
@@ -141,6 +148,14 @@ public class sender_Details extends JDialog {
 				getRootPane().setDefaultButton(okButton);
 			}
 		}
+//		{
+//			if(!com.getName(senderid).isEmpty()){
+//				dispose();
+//				receiver_Details dialog = new receiver_Details(dispatched,consignmentid,receiverid);
+//				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+//				dialog.setVisible(true);
+//			}
+//		}
 	}
 
 }

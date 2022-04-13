@@ -90,6 +90,8 @@ public class Buy_Truck extends JDialog {
 								com.insert_new_truck(truckno, currentBranch);
 								JOptionPane.showMessageDialog(null, "Successfully inserted the truck no."+truckno+" in the database");
 								dispose();
+							}else{
+								JOptionPane.showMessageDialog(null, "Branch "+currentBranch+" doesn't exist in the database");
 							}
 						} catch (SQLException e1) {
 							// TODO Auto-generated catch block
