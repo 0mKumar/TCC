@@ -26,7 +26,6 @@ public class LoginEmployee extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
 	private JPasswordField passwordField;
-	private BufferedImage image;
 
 	/**
 	 * Launch the application.
@@ -43,14 +42,11 @@ public class LoginEmployee extends JDialog {
 
 	/**
 	 * Create the dialog.
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws SQLException
 	 * @throws ClassNotFoundException 
 	 */
-	public LoginEmployee() throws IOException, ClassNotFoundException, SQLException {
+	public LoginEmployee() throws ClassNotFoundException, SQLException {
 		CompanyDAO com = new CompanyDAO();
-		image = ImageIO.read(getClass().getResource("/employee.jpg"));
-		setIconImage(image);
 		setTitle("Employee Login");
 		setBounds(100, 100, 470, 242);
 		getContentPane().setLayout(new BorderLayout());

@@ -33,7 +33,6 @@ public class RegisterManager extends JDialog {
 	private JTextField textField_5;
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
-	private BufferedImage image ;
 	StrongPasswordEncryptor encryptor = new StrongPasswordEncryptor();
 
 	/**
@@ -51,11 +50,8 @@ public class RegisterManager extends JDialog {
 
 	/**
 	 * Create the dialog.
-	 * @throws IOException 
 	 */
-	public RegisterManager() throws IOException {
-		image = ImageIO.read(getClass().getResource("/microsoft.jpg"));
-		setIconImage(image);
+	public RegisterManager() {
 		setTitle("Register as Manager");
 		setBounds(100, 100, 448, 334);
 		getContentPane().setLayout(new BorderLayout());

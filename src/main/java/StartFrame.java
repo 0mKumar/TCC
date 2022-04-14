@@ -24,7 +24,6 @@ public class StartFrame extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private BufferedImage image;
 
 	/**
 	 * Launch the application.
@@ -44,27 +43,17 @@ public class StartFrame extends JFrame {
 
 	/**
 	 * Create the frame.
-	 * @throws IOException 
 	 */
-	public StartFrame() throws IOException {
-		image = ImageIO.read(getClass().getResource("/microsoft.jpg"));
-		setIconImage(image);
+	public StartFrame() {
 		setTitle("Transport Company Computerization Software");
 		setResizable(false);
-		URL url = getClass().getResource("/Truck.gif");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 630, 320);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setBackground(Color.green);
 		contentPane.setLayout(null);
-		
-		Icon icon = new ImageIcon(url);
-		JLabel lblNewLabel = new JLabel(icon);
-		lblNewLabel.setBounds(0, 0, getWidth(), getHeight());
-		contentPane.add(lblNewLabel);
-		
+
 		JButton btnNewButton = new JButton("<html>Log In as <br>Manager</br></html>");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -77,7 +66,7 @@ public class StartFrame extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(10, 70, 110, 55);
+		btnNewButton.setBounds(100, 70, 110, 55);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("<html>Log In as <br>Employee</br></html>");
@@ -92,15 +81,7 @@ public class StartFrame extends JFrame {
 				}
 			}
 		});
-		btnNewButton_1.setBounds(490, 70, 103, 55);
+		btnNewButton_1.setBounds(400, 70, 103, 55);
 		contentPane.add(btnNewButton_1);
-		
-		URL url1 = getClass().getResource("/emp.gif");
-		Icon icon1 = new ImageIcon(url1);
-		
-		JLabel label = new JLabel("");
-		label.setBounds(464, 148, icon1.getIconWidth(), icon1.getIconHeight());
-		label.setIcon(icon1); 
-		contentPane.add(label);
 	}
 }

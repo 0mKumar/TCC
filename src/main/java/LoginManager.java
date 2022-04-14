@@ -30,7 +30,6 @@ public class LoginManager extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
 	private JPasswordField passwordField;
-	private BufferedImage image;
 	private CompanyDAO comp;
 	/**
 	 * Launch the application.
@@ -47,17 +46,14 @@ public class LoginManager extends JDialog {
 
 	/**
 	 * Create the dialog.
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws SQLException
 	 * @throws ClassNotFoundException 
 	 */
-	public LoginManager() throws IOException, ClassNotFoundException, SQLException {
+	public LoginManager() throws ClassNotFoundException, SQLException {
 		comp = new CompanyDAO();
-		image = ImageIO.read(getClass().getResource("/manager.jpg"));
 		setBounds(100, 100, 486, 259);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setIconImage(image);
 		setTitle("Manager Login");
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(new FormLayout(new ColumnSpec[] {

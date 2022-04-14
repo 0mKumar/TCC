@@ -17,7 +17,6 @@ import java.awt.event.ActionEvent;
 public class Manager_Activity extends JFrame {
 
 	private JPanel contentPane;
-	private BufferedImage image;
 
 	/**
 	 * Launch the application.
@@ -37,11 +36,8 @@ public class Manager_Activity extends JFrame {
 
 	/**
 	 * Create the frame.
-	 * @throws IOException 
 	 */
-	public Manager_Activity(String bid) throws IOException {
-		image = ImageIO.read(getClass().getResource("/manager.jpg"));
-		setIconImage(image);
+	public Manager_Activity(String bid) {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 531, 465);
 		contentPane = new JPanel();
